@@ -1,23 +1,20 @@
-// Placeholder content — replace with real details from your resume.
-// Once you share your resume, this is the only file that needs to change.
-
 export const profile = {
-  name: "Your Name",
-  role: "Software Engineer",
-  tagline: "I build things for the web.",
-  location: "City, Country",
-  email: "you@example.com",
-  resumeUrl: "/resume.pdf", // drop your resume PDF into /public/resume.pdf
+  name: "Ishaan Balani",
+  role: "Computer Science Student",
+  tagline: "I build ML pipelines, full-stack apps, and automate the boring stuff.",
+  location: "San Jose, CA",
+  email: "ibalani@asu.edu",
+  resumeUrl: "/resume.pdf",
   socials: {
-    github: "https://github.com/yourhandle",
-    linkedin: "https://linkedin.com/in/yourhandle",
+    github: "https://github.com/ibalani24",
+    linkedin: "https://linkedin.com/in/ishaan-balani-8a9b5229b",
   },
 };
 
 export const about = {
   bio: [
-    "Add a couple of sentences about who you are, what you work on, and what you care about as an engineer.",
-    "A second paragraph works well for interests outside of work, or the kind of problems you enjoy solving.",
+    "I'm a Computer Science student at Arizona State University (Class of 2027), currently doing undergraduate research on AI video generation pipelines and working as a Team Lead Intern building full-stack platforms used by over a thousand students.",
+    "I like working across the stack — from optimizing ML pipelines with TensorFlow and PyTorch to shipping MERN apps with CI/CD in place. Outside of coursework, I build small tools and models for fun, usually at hackathons.",
   ],
 };
 
@@ -32,25 +29,27 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    company: "Company Name",
-    role: "Job Title",
-    start: "2024",
+    company: "Arizona State University",
+    role: "Undergraduate Research Assistant",
+    start: "Aug 2024",
     end: "Present",
-    location: "City, Country",
+    location: "Tempe, AZ",
     highlights: [
-      "Describe a key responsibility or achievement in this role.",
-      "Quantify impact where you can, e.g. performance, scale, or team size.",
+      "Optimized an AI video generation pipeline, reducing processing time by 30% through scalable TensorFlow and PyTorch implementations.",
+      "Applied 3D computer vision (OpenCV) on datasets of over 50,000 frames, enabling automated feature extraction and improving synthesis accuracy by 15%.",
+      "Authored modular research code reused across 2 other research lab projects, ensuring maintainability and reproducibility.",
     ],
   },
   {
-    company: "Previous Company",
-    role: "Job Title",
-    start: "2022",
-    end: "2024",
-    location: "City, Country",
+    company: "Scholarship Discovery Platform",
+    role: "Computer Science Team Lead Intern",
+    start: "Oct 2024",
+    end: "Jul 2025",
+    location: "Remote / Tempe, AZ",
     highlights: [
-      "Describe a key responsibility or achievement in this role.",
-      "Another highlight from this role.",
+      "Directed a team of 5 developers to build a MERN-stack platform serving over 1,200 high school users for scholarship discovery.",
+      "Increased backend query efficiency by 40% via database indexing and optimized API calls.",
+      "Reduced average bug resolution time from 3-5 days to under 24 hours by implementing CI/CD workflows and automated testing.",
     ],
   },
 ];
@@ -65,31 +64,59 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Project One",
+    title: "TaskLocker",
     description:
-      "A short description of the project, what it does, and why you built it.",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
-    link: "#",
-    repo: "#",
+      "A scheduling assistant used by over 100 ASU students that parses PDF schedules into Google Calendar, with automated Gemini-powered planning that cuts routine planning time by 90%.",
+    tech: ["Flask", "JavaScript", "Google Gemini API"],
   },
   {
-    title: "Project Two",
+    title: "AI Tumor Identifier",
     description:
-      "A short description of the project, what it does, and why you built it.",
-    tech: ["Python", "PostgreSQL"],
-    repo: "#",
+      "An ML pipeline achieving over 99% accuracy across 5,000+ tumor records using decision tree and SVM classifiers, with automated preprocessing cutting manual data cleaning by 50%.",
+    tech: ["Python", "Scikit-learn"],
   },
   {
-    title: "Project Three",
+    title: "Music Recommendation Model",
     description:
-      "A short description of the project, what it does, and why you built it.",
-    tech: ["React", "Node.js"],
-    link: "#",
+      "Built at a UC Berkeley hackathon — led a team of 4 to build a real-time recommendation engine over 10,000+ tracks, deployed as a Flask demo with under 200ms response time for live judging.",
+    tech: ["Python", "Flask", "PyTorch"],
   },
 ];
 
 export const skills: { category: string; items: string[] }[] = [
-  { category: "Languages", items: ["TypeScript", "Python", "Java", "SQL"] },
-  { category: "Frameworks", items: ["React", "Next.js", "Node.js"] },
-  { category: "Tools", items: ["Git", "Docker", "AWS", "Vercel"] },
+  {
+    category: "Languages & Frameworks",
+    items: [
+      "Python",
+      "C",
+      "C++",
+      "Java",
+      "JavaScript",
+      "SQL",
+      "Flask",
+      "React",
+      "TensorFlow",
+      "PyTorch",
+      "OpenCV",
+    ],
+  },
+  {
+    category: "Systems & Tools",
+    items: ["Linux", "Git", "AWS (EC2/S3)", "Docker", "MongoDB", "REST APIs", "Google Cloud"],
+  },
+  {
+    category: "Core Knowledge",
+    items: [
+      "Operating Systems",
+      "Networking (TCP/IP, DNS, DHCP)",
+      "Distributed Systems",
+      "Information Security",
+    ],
+  },
+];
+
+export const certifications: string[] = [
+  "CCST: Cisco Certified Support Technician (Networking)",
+  "Cisco Networking Academy: Introduction to Cybersecurity",
+  "Cisco Networking Academy: Introduction to Modern AI",
 ];

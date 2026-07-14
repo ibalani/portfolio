@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/reveal";
-import { skills } from "@/lib/data";
+import { certifications, skills } from "@/lib/data";
 
 export function Skills() {
   return (
@@ -26,6 +26,19 @@ export function Skills() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={skills.length * 0.08}>
+        <div className="mt-10 border-t border-black/5 pt-6 dark:border-white/10">
+          <h3 className="text-sm font-medium text-zinc-950 dark:text-zinc-50">
+            Certifications
+          </h3>
+          <ul className="mt-3 space-y-1.5 text-zinc-600 dark:text-zinc-400">
+            {certifications.map((cert) => (
+              <li key={cert}>{cert}</li>
+            ))}
+          </ul>
+        </div>
+      </Reveal>
     </section>
   );
 }
