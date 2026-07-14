@@ -12,7 +12,7 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[90vh] flex-col items-center justify-center px-6 sm:items-start"
     >
-      <div className="mx-auto flex w-full max-w-5xl flex-col-reverse items-center gap-10 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex w-full max-w-6xl flex-col-reverse items-center gap-12 sm:flex-row sm:items-center sm:justify-between">
         <div className="w-full max-w-2xl">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -27,7 +27,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl font-semibold tracking-tight text-zinc-950 sm:text-6xl dark:text-zinc-50"
+            className="text-5xl font-semibold tracking-tight text-zinc-950 sm:text-7xl lg:text-8xl dark:text-zinc-50"
           >
             {profile.name}
           </motion.h1>
@@ -111,14 +111,14 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="h-40 w-40 shrink-0 rounded-full bg-gradient-to-br from-orange-400 via-amber-400 to-orange-600 p-1.5 sm:h-48 sm:w-48"
+          className="h-52 w-52 shrink-0 rounded-full bg-gradient-to-br from-orange-400 via-amber-400 to-orange-600 p-2 sm:h-72 sm:w-72 lg:h-80 lg:w-80"
         >
           <div className="h-full w-full overflow-hidden rounded-full bg-white dark:bg-black">
             <Image
               src="/profile.jpg"
               alt={profile.name}
-              width={400}
-              height={400}
+              width={640}
+              height={640}
               priority
               className="h-full w-full object-cover"
             />
