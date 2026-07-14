@@ -3,7 +3,7 @@ export const profile = {
   role: "Computer Science Student",
   tagline: "I build ML pipelines, full-stack apps, and automate the boring stuff.",
   location: "San Jose, CA",
-  email: "ibalani@asu.edu",
+  email: "ishaanbalani24@gmail.com",
   resumeUrl: "/resume.pdf",
   socials: {
     github: "https://github.com/ibalani24",
