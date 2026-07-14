@@ -3,14 +3,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { BasketballIcon } from "@/components/icons";
 import { profile } from "@/lib/data";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "Scouting" },
+  { href: "#experience", label: "Game Log" },
+  { href: "#projects", label: "Highlights" },
+  { href: "#skills", label: "Starting 5" },
+  { href: "#contact", label: "Get in the Game" },
 ];
 
 export function Navbar() {
@@ -19,7 +20,11 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-black/70">
       <nav className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-        <a href="#top" className="font-semibold tracking-tight">
+        <a
+          href="#top"
+          className="flex items-center gap-2 font-semibold tracking-tight"
+        >
+          <BasketballIcon className="h-4 w-4 text-orange-600 dark:text-orange-500" />
           {profile.name}
         </a>
 

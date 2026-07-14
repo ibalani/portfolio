@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { BackgroundGradient } from "@/components/background-gradient";
+import { CourtBackground } from "@/components/court-background";
 import { profile } from "@/lib/data";
 import "./globals.css";
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white text-zinc-950 dark:bg-black dark:text-zinc-50">
-        <BackgroundGradient />
+        <CourtBackground />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,13 +1,12 @@
 import { Reveal } from "@/components/reveal";
-import { experience } from "@/lib/data";
+import { SectionEyebrow } from "@/components/section-eyebrow";
+import { experience, sectionLabels } from "@/lib/data";
 
 export function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-4xl px-6 py-24">
       <Reveal>
-        <h2 className="text-sm font-mono text-zinc-500 dark:text-zinc-400">
-          02 · Experience
-        </h2>
+        <SectionEyebrow {...sectionLabels.experience} />
       </Reveal>
 
       <div className="mt-8 space-y-10">
@@ -26,7 +25,7 @@ export function Experience() {
                     {job.location}
                   </p>
                 )}
-                <ul className="mt-3 list-disc space-y-1.5 pl-4 text-zinc-700 dark:text-zinc-300">
+                <ul className="mt-3 list-disc space-y-1.5 pl-4 text-zinc-700 marker:text-orange-500 dark:text-zinc-300">
                   {job.highlights.map((point, j) => (
                     <li key={j}>{point}</li>
                   ))}

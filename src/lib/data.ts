@@ -13,10 +13,25 @@ export const profile = {
 
 export const about = {
   bio: [
-    "I'm a Computer Science student at Arizona State University (Class of 2027), currently doing undergraduate research on AI video generation pipelines and working as a Team Lead Intern building full-stack platforms used by over a thousand students.",
-    "I like working across the stack — from optimizing ML pipelines with TensorFlow and PyTorch to shipping MERN apps with CI/CD in place. Outside of coursework, I build small tools and models for fun, usually at hackathons.",
+    "I'm a Computer Science student at Arizona State University (Draft Class of 2027), currently doing undergraduate research on AI video generation pipelines and working as a Team Lead Intern building full-stack platforms used by over a thousand students.",
+    "I like working across the stack — from optimizing ML pipelines with TensorFlow and PyTorch to shipping MERN apps with CI/CD in place. Outside of coursework, I build small tools and models for fun at hackathons, and you can usually find me running pickup games on the weekend.",
   ],
 };
+
+// Section eyebrow labels, framed as quarters of a basketball game.
+export const sectionLabels = {
+  about: { period: "Q1", title: "Scouting Report" },
+  experience: { period: "Q2", title: "Game Log" },
+  projects: { period: "Q3", title: "Highlight Reel" },
+  skills: { period: "Q4", title: "Starting Five" },
+  contact: { period: "OT", title: "Get in the Game" },
+};
+
+export const heroStats = [
+  { value: "2", label: "Seasons on the roster" },
+  { value: "3", label: "Highlight plays" },
+  { value: "2027", label: "Draft class" },
+];
 
 export type Experience = {
   company: string;
