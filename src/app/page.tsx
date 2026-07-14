@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/navbar";
-import { BackgroundGradient } from "@/components/background-gradient";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
@@ -13,10 +12,7 @@ export default function Home() {
     <>
       <Navbar />
       <main className="flex-1">
-        <div className="relative overflow-hidden">
-          <BackgroundGradient />
-          <Hero />
-        </div>
+        <Hero />
         <About />
         <Experience />
         <Projects />
