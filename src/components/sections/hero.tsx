@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
@@ -9,99 +10,119 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[90vh] flex-col items-start justify-center px-6"
+      className="relative flex min-h-[90vh] flex-col items-center justify-center px-6 sm:items-start"
     >
-      <div className="mx-auto w-full max-w-4xl">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-4 font-mono text-sm text-zinc-500 dark:text-zinc-400"
-        >
-          Hi, I&apos;m
-        </motion.p>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl font-semibold tracking-tight text-zinc-950 sm:text-6xl dark:text-zinc-50"
-        >
-          {profile.name}
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 max-w-xl text-lg text-zinc-600 dark:text-zinc-400"
-        >
-          {profile.role} — {profile.tagline}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-8 flex items-center gap-4"
-        >
-          <a
-            href="#contact"
-            className="rounded-full bg-orange-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-orange-700"
+      <div className="mx-auto flex w-full max-w-5xl flex-col-reverse items-center gap-10 sm:flex-row sm:items-center sm:justify-between">
+        <div className="w-full max-w-2xl">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-4 font-mono text-sm text-zinc-500 dark:text-zinc-400"
           >
-            Get in the Game
-          </a>
-          <a
-            href={profile.resumeUrl}
-            className="rounded-full border border-black/10 px-5 py-2.5 text-sm font-medium transition-colors hover:bg-black/5 dark:border-white/10 dark:hover:bg-white/10"
+            Hi, I&apos;m
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl font-semibold tracking-tight text-zinc-950 sm:text-6xl dark:text-zinc-50"
           >
-            Résumé
-          </a>
+            {profile.name}
+          </motion.h1>
 
-          <div className="ml-2 flex items-center gap-3 text-zinc-500 dark:text-zinc-400">
-            <a
-              href={profile.socials.github}
-              aria-label="GitHub"
-              className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
-            >
-              <GithubIcon className="h-[19px] w-[19px]" />
-            </a>
-            <a
-              href={profile.socials.linkedin}
-              aria-label="LinkedIn"
-              className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
-            >
-              <LinkedinIcon className="h-[19px] w-[19px]" />
-            </a>
-            <a
-              href={`mailto:${profile.email}`}
-              aria-label="Email"
-              className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
-            >
-              <Mail size={19} />
-            </a>
-          </div>
-        </motion.div>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-4 max-w-xl text-lg text-zinc-600 dark:text-zinc-400"
+          >
+            {profile.role} — {profile.tagline}
+          </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-10 flex flex-wrap items-center gap-3"
-        >
-          {heroStats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex items-center gap-2 rounded-full border border-black/10 px-4 py-1.5 text-sm dark:border-white/10"
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 flex items-center gap-4"
+          >
+            <a
+              href="#contact"
+              className="rounded-full bg-orange-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-orange-700"
             >
-              <span className="font-mono font-semibold text-orange-600 dark:text-orange-500">
-                {stat.value}
-              </span>
-              <span className="text-zinc-500 dark:text-zinc-400">
-                {stat.label}
-              </span>
+              Get in the Game
+            </a>
+            <a
+              href={profile.resumeUrl}
+              className="rounded-full border border-black/10 px-5 py-2.5 text-sm font-medium transition-colors hover:bg-black/5 dark:border-white/10 dark:hover:bg-white/10"
+            >
+              Résumé
+            </a>
+
+            <div className="ml-2 flex items-center gap-3 text-zinc-500 dark:text-zinc-400">
+              <a
+                href={profile.socials.github}
+                aria-label="GitHub"
+                className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+              >
+                <GithubIcon className="h-[19px] w-[19px]" />
+              </a>
+              <a
+                href={profile.socials.linkedin}
+                aria-label="LinkedIn"
+                className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+              >
+                <LinkedinIcon className="h-[19px] w-[19px]" />
+              </a>
+              <a
+                href={`mailto:${profile.email}`}
+                aria-label="Email"
+                className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+              >
+                <Mail size={19} />
+              </a>
             </div>
-          ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-10 flex flex-wrap items-center gap-3"
+          >
+            {heroStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="flex items-center gap-2 rounded-full border border-black/10 px-4 py-1.5 text-sm dark:border-white/10"
+              >
+                <span className="font-mono font-semibold text-orange-600 dark:text-orange-500">
+                  {stat.value}
+                </span>
+                <span className="text-zinc-500 dark:text-zinc-400">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="h-40 w-40 shrink-0 rounded-full bg-gradient-to-br from-orange-400 via-amber-400 to-orange-600 p-1.5 sm:h-48 sm:w-48"
+        >
+          <div className="h-full w-full overflow-hidden rounded-full bg-white dark:bg-black">
+            <Image
+              src="/profile.jpg"
+              alt={profile.name}
+              width={400}
+              height={400}
+              priority
+              className="h-full w-full object-cover"
+            />
+          </div>
         </motion.div>
       </div>
 
